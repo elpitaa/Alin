@@ -1,0 +1,89 @@
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.10/dist-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 1314, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/usr/local/lib/python3.10/dist-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/usr/local/lib/python3.10/dist-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+def input_matrix():
+    baris = int(input("Masukkan jumlah baris: "))
+    kolom = int(input("Masukkan jumlah kolom: "))
+    matrix = []
+    for i in range(baris):
+        row = []
+        print(f"Masukkan elemen untuk baris {i + 1}: ")
+        for j in range(kolom):
+            element = float(input(f"Elemen [{i + 1}, {j + 1}]: "))
+            row.append(element)
+        matrix.append(row)
+    return matrix
+
+def perkalian(matrix1, matrix2):
+    if len(matrix1[0]) != len(matrix2):
+        print("Perkalian matriks tidak dapat dilakukan karena jumlah kolom dalam matriks pertama tidak sama dengan jumlah baris dalam matriks kedua")
+        return None
+    result = [[0 for _ in range(len(matrix2[0]))] for _ in range(len(matrix1))]
+    for i in range(len(matrix1)):
+        for j in range(len(matrix2[0])):
+            for k in range(len(matrix2)):
+                result[i][j] += matrix1[i][k] * matrix2[k][j]
+    return result
+
+def tampilan_hasil(matrix):
+    for baris in matrix:
+        print(baris)
+coba = input("Ingin mengisi matriks sendiri? (iya/tidak) : ")
+if coba == "iya":
+    print("Program perkalian matriks!!")
+    print("Masukkan matriks pertama:")
+    matriks1 = input_matrix()
+    print ("Matriks 1 = ", matriks1)
+    print("Masukkan matriks kedua:")
+    matriks2 = input_matrix()
+    print ("Matriks 2 = ",matriks2)
+elif coba == "tidak":
+    print ("Berikut adalah contoh matriks")
+    print ("""
+    matriks 1=([[1, 0, 2],[2, 0, 4],[4, 6, 8]])
+    matriks 224=([[2, 3, 4],[4, 5, 6], [1, 2, 4]])
+    """)
+    matriks1=([[1, 0, 2],[2, 0, 4],[4, 6, 8]])
+    matriks2=([[2, 3, 4],[4, 5, 6], [1, 2, 4]])
+else:
+    print("Maaf pilihan ersebut tidak tersedia. Tolong masukkan pilihan yang sesuai")
+
+test = perkalian(matriks1, matriks2)
+print("\nHasil perkalian matriks:")
+tampilan_hasil(test)
+
+------------------
+
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mStdinNotImplementedError[0m                  Traceback (most recent call last)
+[0;32m<ipython-input-24-f7760a4645fa>[0m in [0;36m<cell line: 28>[0;34m()[0m
+[1;32m     26[0m     [0;32mfor[0m [0mbaris[0m [0;32min[0m [0mmatrix[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     27[0m         [0mprint[0m[0;34m([0m[0mbaris[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 28[0;31m [0mcoba[0m [0;34m=[0m [0minput[0m[0;34m([0m[0;34m"Ingin mengisi matriks sendiri? (iya/tidak) : "[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     29[0m [0;32mif[0m [0mcoba[0m [0;34m==[0m [0;34m"iya"[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     30[0m     [0mprint[0m[0;34m([0m[0;34m"Program perkalian matriks!!"[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python3.10/dist-packages/ipykernel/kernelbase.py[0m in [0;36mraw_input[0;34m(self, prompt)[0m
+[1;32m    846[0m         """
+[1;32m    847[0m         [0;32mif[0m [0;32mnot[0m [0mself[0m[0;34m.[0m[0m_allow_stdin[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 848[0;31m             raise StdinNotImplementedError(
+[0m[1;32m    849[0m                 [0;34m"raw_input was called, but this frontend does not support input requests."[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    850[0m             )
+
+[0;31mStdinNotImplementedError[0m: raw_input was called, but this frontend does not support input requests.
+
