@@ -57,6 +57,8 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Aljabar_Matriks';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -138,20 +140,14 @@
 
   
 
-<a class="navbar-brand logo" href="welcome.html">
+<a class="navbar-brand logo" href="intro.html">
   
   
   
   
   
-    
-    
-      
-    
-    
-    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
-    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
   
+    <p class="title logo__title">My sample book</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -170,13 +166,15 @@
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="welcome.html">
+                <a class="reference internal" href="intro.html">
                     Welcome to elvita’s Jupyter Book
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Aljabar Matriks</a></li>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
 </ul>
 
     </div>
@@ -409,13 +407,16 @@ document.write(`
 </div>
 </div>
 </div>
-<p>\begin{equation*}
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{equation*}
 A=
 \begin{bmatrix}
-1&amp;2&amp;3\
-3&amp;4&amp;3\5&amp;5&amp;6
+1&amp;2&amp;3\\
+3&amp;4&amp;3\\5&amp;5&amp;6
 \end{bmatrix}
-\end{equation*}</p>
+\end{equation*}
+\end{split}\]</div>
 <p>####Jenis-jenis Matriks</p>
 <p>####1. Matriks Identitas
 Matriks persegi yang memiliki nilai 1 di diagonal utamanya dan nilai 0 di seluruh elemen lainnya. contoh Matriks Identitas:</p>
@@ -437,15 +438,18 @@ Matriks persegi yang memiliki nilai 1 di diagonal utamanya dan nilai 0 di seluru
 </div>
 </div>
 </div>
-<p>\begin{equation*}
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{equation*}
 A=
 \begin{bmatrix}
-1&amp;0&amp;0&amp;0\
-0&amp;1&amp;0&amp;0\
-0&amp;0&amp;1&amp;0\
+1&amp;0&amp;0&amp;0\\
+0&amp;1&amp;0&amp;0\\
+0&amp;0&amp;1&amp;0\\
 0&amp;0&amp;0&amp;1
 \end{bmatrix}
-\end{equation*}</p>
+\end{equation*}
+\end{split}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -493,15 +497,18 @@ A=
 </div>
 </div>
 </div>
-<p>\begin{equation*}
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{equation*}
 A=
 \begin{bmatrix}
-2&amp;3&amp;4&amp;7\
-4&amp;5&amp;6&amp;7\
-2&amp;4&amp;5&amp;6\
+2&amp;3&amp;4&amp;7\\
+4&amp;5&amp;6&amp;7\\
+2&amp;4&amp;5&amp;6\\
 5&amp;6&amp;7&amp;8
 \end{bmatrix}
-\end{equation*}</p>
+\end{equation*}
+\end{split}\]</div>
 <p>####2. Matriks Nol
 Matriks nol adalah matriks yang semua entrinya adalah bilangan nol.
 contoh Matriks Nol:</p>
@@ -530,14 +537,17 @@ contoh Matriks Nol:</p>
 </div>
 </div>
 </div>
-<p>\begin{equation*}
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{equation*}
 MatriksNol=
 \begin{bmatrix}
-0&amp;0&amp;0\
-0&amp;0&amp;0\
+0&amp;0&amp;0\\
+0&amp;0&amp;0\\
 0&amp;0&amp;0
 \end{bmatrix}
-\end{equation*}</p>
+\end{equation*}
+\end{split}\]</div>
 <p>####3.Matriks Baris
 Matriks baris merupakan matriks yang terdiri atas satu baris saja. Contoh matriks Baris:</p>
 <div class="cell docutils container">
@@ -581,12 +591,15 @@ Matriks baris merupakan matriks yang terdiri atas satu baris saja. Contoh matrik
 </div>
 </div>
 </div>
-<p>\begin{equation*}
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{equation*}
 A=
 \begin{bmatrix}
-2&amp;3&amp;4&amp;5\
+2&amp;3&amp;4&amp;5\\
 \end{bmatrix}
-\end{equation*}</p>
+\end{equation*}
+\end{split}\]</div>
 <p>####4. Matriks Kolom
 Matriks baris merupakan matriks yang terdiri atas satu baris saja. Contoh Matriks Kolom:</p>
 <p>!NOTE: ‘.reshape(-1, 1)’,  tanda -1 digunakan untuk menandakan bahwa jumlah baris dalam matriks akan disesuaikan secara otomatis berdasarkan jumlah elemen yang ada, sedangkan 1 menunjukkan bahwa kita ingin memiliki hanya satu kolom dalam matriks tersebut.</p>
@@ -615,15 +628,18 @@ Matriks baris merupakan matriks yang terdiri atas satu baris saja. Contoh Matrik
 </div>
 </div>
 </div>
-<p>\begin{equation*}
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{equation*}
 A=
 \begin{bmatrix}
-1\
-2\
-3\
+1\\
+2\\
+3\\
 4
 \end{bmatrix}
-\end{equation*}</p>
+\end{equation*}
+\end{split}\]</div>
 <p>####5. Matriks Diagonal
 Matriks diagonal adalah matriks persegi yang elemen-elemen selain diagonal utamanya bernilai nol. Contoh dari Matriks Diagonal:</p>
 <div class="cell docutils container">
@@ -649,15 +665,18 @@ Matriks diagonal adalah matriks persegi yang elemen-elemen selain diagonal utama
 </div>
 </div>
 </div>
-<p>\begin{equation*}
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{equation*}
 MatriksDiagonal=
 \begin{bmatrix}
-1&amp;0&amp;0&amp;0\
-0&amp;2&amp;0&amp;0\
-0&amp;0&amp;3&amp;0\
+1&amp;0&amp;0&amp;0\\
+0&amp;2&amp;0&amp;0\\
+0&amp;0&amp;3&amp;0\\
 0&amp;0&amp;0&amp;4
 \end{bmatrix}
-\end{equation*}</p>
+\end{equation*}
+\end{split}\]</div>
 <p>####6. Matriks Simetris
 Matriks simetris adalah matriks di mana elemen-elemennya simetris terhadap diagonal utamanya.
 atau bisa dikatakan kolom menjadi baris. Contoh dari Matriks Simetris:</p>
@@ -704,13 +723,16 @@ atau bisa dikatakan kolom menjadi baris. Contoh dari Matriks Simetris:</p>
 </div>
 </div>
 </div>
-<p>\begin{equation*}
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{equation*}
 a=
 \begin{bmatrix}
-1&amp;2&amp;3\
-2&amp;3&amp;4\4&amp;5&amp;4
+1&amp;2&amp;3\\
+2&amp;3&amp;4\\4&amp;5&amp;4
 \end{bmatrix}
-\end{equation*}</p>
+\end{equation*}
+\end{split}\]</div>
 <p>####7. Matriks Segitiga Atas
 Suatu matriks segitiga dikatakan matriks segitiga atas jika semua elemen di bawah diagonal utamanya adalah nol. Contoh dari Matriks Segitiga Atas:</p>
 <div class="cell docutils container">
@@ -732,13 +754,16 @@ Suatu matriks segitiga dikatakan matriks segitiga atas jika semua elemen di bawa
 </div>
 </div>
 </div>
-<p>\begin{equation*}
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{equation*}
 A=
 \begin{bmatrix}
-1&amp;2&amp;3\
-0&amp;4&amp;5\0&amp;0&amp;6
+1&amp;2&amp;3\\
+0&amp;4&amp;5\\0&amp;0&amp;6
 \end{bmatrix}
-\end{equation*}</p>
+\end{equation*}
+\end{split}\]</div>
 <p>####8. Matriks Segitiga Bawah
 Suatu matriks segitiga dikatakan matriks segitiga bawah jika semua elemen di atas diagonal utamanya adalah nol. Contoh dari Segitiga Bawah:</p>
 <div class="cell docutils container">
@@ -760,13 +785,16 @@ Suatu matriks segitiga dikatakan matriks segitiga bawah jika semua elemen di ata
 </div>
 </div>
 </div>
-<p>\begin{equation*}
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{equation*}
 A=
 \begin{bmatrix}
-1&amp;0&amp;0\
-4&amp;5&amp;0\7&amp;8&amp;9
+1&amp;0&amp;0\\
+4&amp;5&amp;0\\7&amp;8&amp;9
 \end{bmatrix}
-\end{equation*}</p>
+\end{equation*}
+\end{split}\]</div>
 <p>####9. Matriks Singular
 matriks yang memiliki determinan nol.</p>
 <p>####10. Matriks Persegi
@@ -790,13 +818,16 @@ matriks persegi adalah matriks yang memiliki jumlah baris dan jumlah kolom yang 
 </div>
 </div>
 </div>
-<p>\begin{equation*}
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{equation*}
 A=
 \begin{bmatrix}
-3&amp;4&amp;5\
-6&amp;7&amp;5\7&amp;6&amp;5
+3&amp;4&amp;5\\
+6&amp;7&amp;5\\7&amp;6&amp;5
 \end{bmatrix}
-\end{equation*}</p>
+\end{equation*}
+\end{split}\]</div>
 <p>B. OPERASI PADA MATRIKS</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -832,27 +863,30 @@ C=
 </div>
 </div>
 </div>
-<p>\begin{align*}
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
 A=
 \begin{bmatrix}
-1&amp;0&amp;2\
-2&amp;0&amp;4\
+1&amp;0&amp;2\\
+2&amp;0&amp;4\\
 4&amp;6&amp;8
 \end{bmatrix}
 &amp;&amp;
 B=
 \begin{bmatrix}
-2&amp;3&amp;4\
-4&amp;5&amp;6\1&amp;2&amp;4
+2&amp;3&amp;4\\
+4&amp;5&amp;6\\1&amp;2&amp;4
 \end{bmatrix}
 &amp;&amp;
 C=
 \begin{bmatrix}
-2&amp;3\
-4&amp;5\
+2&amp;3\\
+4&amp;5\\
 6&amp;7
 \end{bmatrix}
-\end{align*}</p>
+\end{align*}
+\end{split}\]</div>
 <p>##1. Penjumlahan Matriks
 Penjumlahan matriks adalah operasi penjumlahan dua matriks dengan menjumlahkan komponen-komponennya yang seletak. Dua matriks dapat dijumlahkan jika jumlah baris dan kolomnya sama. Matriks hasil penjumlahannya juga akan memiliki ordo yang sama.</p>
 <div class="cell docutils container">
@@ -877,21 +911,24 @@ sifat di atas merupakan sifat komunitatif karena A+B = B+A
 </div>
 </div>
 </div>
-<p>\begin{align*}
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
 A+B=
 \begin{bmatrix}
-3&amp;3&amp;6\
-6&amp;5&amp;10\
+3&amp;3&amp;6\\
+6&amp;5&amp;10\\
 5&amp;8&amp;12
 \end{bmatrix}
 &amp;&amp;
 B+A=
 \begin{bmatrix}
-3&amp;3&amp;6\
-6&amp;5&amp;10\
+3&amp;3&amp;6\\
+6&amp;5&amp;10\\
 5&amp;8&amp;12
 \end{bmatrix}
-\end{align*}</p>
+\end{align*}
+\end{split}\]</div>
 <p>sifat di atas merupakan sifat komutatif karena A+B = B+A</p>
 <p>##2. Pengurangan Matriks
 Penguragan matriks memiliki konsep yang sama dengan penjumlahan. Dua buah matriks dapat dikurangkan apabila keduanya memiliki ordo yang sama.</p>
@@ -960,28 +997,31 @@ BC=
 </div>
 </div>
 </div>
-<p>\begin{align*}
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
 AB=
 \begin{bmatrix}
-4&amp;7&amp;12\
-8&amp;14&amp;24\
+4&amp;7&amp;12\\
+8&amp;14&amp;24\\
 40&amp;58&amp;84
 \end{bmatrix}
 &amp;&amp;
 AC=
 \begin{bmatrix}
-14&amp;17\
-28&amp;34\
+14&amp;17\\
+28&amp;34\\
 80&amp;98
 \end{bmatrix}
 &amp;&amp;
 BC=
 \begin{bmatrix}
-40&amp;49\
-64&amp;79\
+40&amp;49\\
+64&amp;79\\
 34&amp;41
 \end{bmatrix}
-\end{align*}</p>
+\end{align*}
+\end{split}\]</div>
 <ul class="simple">
 <li><p>Sifat Asosiasi:</p></li>
 </ul>
@@ -1098,25 +1138,28 @@ A=
 </div>
 </div>
 </div>
-<p>\begin{equation*}
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{equation*}
 AI=
 \begin{bmatrix}
-1&amp;0&amp;2\
-2&amp;0&amp;4\4&amp;6&amp;8
+1&amp;0&amp;2\\
+2&amp;0&amp;4\\4&amp;6&amp;8
 \end{bmatrix}
 IA=
 \begin{bmatrix}
-1&amp;0&amp;2\
-2&amp;0&amp;4\
+1&amp;0&amp;2\\
+2&amp;0&amp;4\\
 4&amp;6&amp;8
 \end{bmatrix}
 A=
 \begin{bmatrix}
-1&amp;0&amp;2\
-2&amp;0&amp;4\
+1&amp;0&amp;2\\
+2&amp;0&amp;4\\
 4&amp;6&amp;8
 \end{bmatrix}
-\end{equation*}</p>
+\end{equation*}
+\end{split}\]</div>
 <ul>
 <li><p>tidak berlaku sifat kumutatif</p>
 <p>AB != BA atau AB tidak sama dengan BA</p>
@@ -1142,21 +1185,24 @@ BA=
 </div>
 </div>
 </div>
-<p>\begin{align*}
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align*}
 AB=
 \begin{bmatrix}
-4&amp;-7&amp;4\
-8&amp;14&amp;24\
+4&amp;-7&amp;4\\
+8&amp;14&amp;24\\
 40&amp;58&amp;84
 \end{bmatrix}
 &amp;&amp;
 BA=
 \begin{bmatrix}
-24&amp;24&amp;48\
-38&amp;36&amp;76\
+24&amp;24&amp;48\\
+38&amp;36&amp;76\\
 21&amp;24&amp;76
 \end{bmatrix}
-\end{align*}</p>
+\end{align*}
+\end{split}\]</div>
 <p>##4. Transpose Matriks</p>
 <p>Transpose matriks adalah operasi yang menghasilkan matriks baru dengan menukar baris dan kolom dari matriks asalnya. Dengan kata lain, jika matriks asalnya memiliki dimensi (mxn), maka transpose-nya akan memiliki dimensi (nxm), di mana elemen-elemennya dipertukarkan antara baris dan kolom sesuai dengan posisi aslinya.</p>
 <div class="cell docutils container">
@@ -1267,9 +1313,6 @@ Hasil perkalian matriks:
 [4, 7, 12]
 [8, 14, 24]
 [40, 58, 84]
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 </div>

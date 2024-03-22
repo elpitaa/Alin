@@ -63,7 +63,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Aljabar Matriks" href="Aljabar_Matriks.html" />
-    <link rel="prev" title="Welcome to elvita’s Jupyter Book" href="welcome.html" />
+    <link rel="prev" title="Welcome to elvita’s Jupyter Book" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -141,20 +141,14 @@
 
   
 
-<a class="navbar-brand logo" href="welcome.html">
+<a class="navbar-brand logo" href="intro.html">
   
   
   
   
   
-    
-    
-      
-    
-    
-    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
-    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
   
+    <p class="title logo__title">My sample book</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -173,13 +167,15 @@
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="welcome.html">
+                <a class="reference internal" href="intro.html">
                     Welcome to elvita’s Jupyter Book
                 </a>
             </li>
         </ul>
         <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Aljabar_Matriks.html">Aljabar Matriks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown.html">Markdown Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
 </ul>
 
     </div>
@@ -481,13 +477,16 @@ x_1+2x_2+3x_3=9\\
 </div>
 </div>
 </div>
-<p>\begin{equation*}
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{equation*}
 A=
 \begin{bmatrix}
-8&amp;9&amp;1&amp;19\
-1&amp;2&amp;3&amp;9\2&amp;1&amp;1&amp;5
+8&amp;9&amp;1&amp;19\\
+1&amp;2&amp;3&amp;9\\2&amp;1&amp;1&amp;5
 \end{bmatrix}
-\end{equation*}</p>
+\end{equation*}
+\end{split}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">A1</span> <span class="o">=</span> <span class="n">RowSwap</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
@@ -503,13 +502,16 @@ A=
 </div>
 </div>
 </div>
-<p>\begin{equation*}
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{equation*}
 A1=
 \begin{bmatrix}
-1&amp;2&amp;3&amp;9\
-8&amp;9&amp;1&amp;19\2&amp;1&amp;1&amp;5
+1&amp;2&amp;3&amp;9\\
+8&amp;9&amp;1&amp;19\\2&amp;1&amp;1&amp;5
 \end{bmatrix}
-\end{equation*}</p>
+\end{equation*}
+\end{split}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#tambahkan -8 kali baris 0 ke baris 1</span>
@@ -526,13 +528,16 @@ A1=
 </div>
 </div>
 </div>
-<p>\begin{equation*}
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{equation*}
 A2=
 \begin{bmatrix}
-1&amp;2&amp;3&amp;9\
-0&amp;-7&amp;-23&amp;-53\2&amp;1&amp;1&amp;5
+1&amp;2&amp;3&amp;9\\
+0&amp;-7&amp;-23&amp;-53\\2&amp;1&amp;1&amp;5
 \end{bmatrix}
-\end{equation*}</p>
+\end{equation*}
+\end{split}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#tambahkan -2 kali baris 0 ke baris 2</span>
@@ -549,13 +554,16 @@ A2=
 </div>
 </div>
 </div>
-<p>\begin{equation*}
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{equation*}
 A3=
 \begin{bmatrix}
-1&amp;2&amp;3&amp;9\
-0&amp;-7&amp;-23&amp;-53\0&amp;-3&amp;-5&amp;-13
+1&amp;2&amp;3&amp;9\\
+0&amp;-7&amp;-23&amp;-53\\0&amp;-3&amp;-5&amp;-13
 \end{bmatrix}
-\end{equation*}</p>
+\end{equation*}
+\end{split}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#kalikan baris 1 dengan -1/7</span>
@@ -572,13 +580,16 @@ A3=
 </div>
 </div>
 </div>
-<p>\begin{equation*}
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{equation*}
 A4=
 \begin{bmatrix}
-1&amp;2&amp;3&amp;9\
--0&amp;1&amp;3.28571429&amp;7.57142857\0&amp;-3&amp;-5&amp;-13:
+1&amp;2&amp;3&amp;9\\
+-0&amp;1&amp;3.28571429&amp;7.57142857\\0&amp;-3&amp;-5&amp;-13:
 \end{bmatrix}
-\end{equation*}</p>
+\end{equation*}
+\end{split}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#tambahkan 3 kali baris 1 ke baris 2</span>
@@ -595,13 +606,16 @@ A4=
 </div>
 </div>
 </div>
-<p>\begin{equation*}
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{equation*}
 A4=
 \begin{bmatrix}
-1&amp;2&amp;3&amp;9\
--0&amp;1&amp;3.28571429&amp;7.57142857\0&amp;-3&amp;4.85714286&amp;9.71428571
+1&amp;2&amp;3&amp;9\\
+-0&amp;1&amp;3.28571429&amp;7.57142857\\0&amp;-3&amp;4.85714286&amp;9.71428571
 \end{bmatrix}
-\end{equation*}</p>
+\end{equation*}
+\end{split}\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#kalikan baris 2 dengan 1/4</span>
@@ -618,13 +632,16 @@ A4=
 </div>
 </div>
 </div>
-<p>\begin{equation*}
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{equation*}
 A4=
 \begin{bmatrix}
-1&amp;2&amp;3&amp;9\
--0&amp;1&amp;3.28571429&amp;7.57142857\0&amp;0&amp;1.21428571&amp;2.42857143
+1&amp;2&amp;3&amp;9\\
+-0&amp;1&amp;3.28571429&amp;7.57142857\\0&amp;0&amp;1.21428571&amp;2.42857143
 \end{bmatrix}
-\end{equation*}</p>
+\end{equation*}
+\end{split}\]</div>
 <p>dari matriks terakhir, sudah memenuhi ketiga kriteria bentuk eselon baris.
 selanjutnya, mengubahnya menjadi sistem persamaan linear
 $<span class="math notranslate nohighlight">\(
@@ -738,7 +755,7 @@ x1: 1
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="welcome.html"
+       href="intro.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
