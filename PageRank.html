@@ -57,6 +57,8 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'PageRank';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -435,9 +437,12 @@ document.write(`
 <ol class="arabic simple" start="4">
 <li><p>Faktor Redaman: Untuk memperhitungkan kemungkinan bahwa pengguna mungkin melompat secara acak ke halaman lain alih-alih mengikuti tautan diperkenalkan faktor redaman 𝑑 Faktor ini biasanya diatur sekitar 0,85. Rumus PageRank adalah:</p></li>
 </ol>
-<p>\begin{equation}
+<div class="math notranslate nohighlight">
+\[
+\begin{equation}
 PR(P_i) = \frac{1 - d}{N} + d \sum_{P_j \in M(P_i)} \frac{PR(P_j)}{L(P_j)}
-\end{equation}</p>
+\end{equation}
+\]</div>
 <section id="komputasi-untuk-menghitung-pagerank">
 <h2>komputasi untuk menghitung pagerank<a class="headerlink" href="#komputasi-untuk-menghitung-pagerank" title="Link to this heading">#</a></h2>
 <p>(gunakan error untuk menghentikan literasi
